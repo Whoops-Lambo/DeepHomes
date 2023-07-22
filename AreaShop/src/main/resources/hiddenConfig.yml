@@ -1,5 +1,5 @@
 # ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-# ║ hiddenConfig.yml file of the AreaShop plugin created by NLThijs48.                                                         ║
+# ║ hiddenConfig.yml file of the DeepHomes plugin created by DevAustin.                                                         ║
 # ║ Options in this file are available in config.yml, but are not shown by default there.                                      ║
 # ║ The options in these file are either very advanced, or not useful for the majority of users.                               ║
 # ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -13,7 +13,7 @@
 
 # Timings for saving files that need saving.
 saving:
-  delay: '11 minutes'
+  delay: '10 minutes'
   regionsPerTick: 1
 # Timings for rent expiration checking.
 expiration:
@@ -23,7 +23,7 @@ expiration:
 expireWarning:
   delay: '11 seconds'
   regionsPerTick: 5
-# Timings for updating signs and region flags ('/as reload' or after '/as groupadd' or '/as groupdel').
+# Timings for updating signs and region flags ('/dh reload' or after '/dh groupadd' or '/dh groupdel').
 update:
   regionsPerTick: 10
 # Time between checking if any regions need to be unrented because the player was not online for the specified time period.
@@ -37,7 +37,7 @@ signs:
 # Number of regions per tick to check when a player joins to see if his name changed for regions he owned (updates the regions when changed).
 nameupdate:
   regionsPerTick: 10
-# Timings for adding regions to AreaShop ('/as stack').
+# Timings for adding regions to DeepHomes ('/dh stack').
 adding:
   regionsPerTick: 2
 
