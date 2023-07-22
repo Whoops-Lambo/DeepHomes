@@ -3,17 +3,17 @@ package me.devaustin.deephomes.commands;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import me.devaustin.deephomss.DeepHomss;
 import me.devaustin.deephomes.events.ask.AddingRegionEvent;
-import me.wiefferink.areashop.events.ask.BuyingRegionEvent;
-import me.wiefferink.areashop.events.ask.RentingRegionEvent;
-import me.wiefferink.areashop.events.notify.BoughtRegionEvent;
-import me.wiefferink.areashop.events.notify.RentedRegionEvent;
-import me.wiefferink.areashop.interfaces.WorldEditSelection;
-import me.wiefferink.areashop.managers.FileManager;
-import me.wiefferink.areashop.regions.BuyRegion;
-import me.wiefferink.areashop.regions.GeneralRegion;
-import me.wiefferink.areashop.regions.RentRegion;
-import me.wiefferink.areashop.tools.Utils;
-import me.wiefferink.bukkitdo.Do;
+import me.devaustin.deephomes.events.ask.BuyingRegionEvent;
+import me.devaustin.deephomes.events.ask.RentingRegionEvent;
+import me.devaustin.deephomes.events.notify.BoughtRegionEvent;
+import me.devaustin.deephomes.events.notify.RentedRegionEvent;
+import me.devaustin.deephomes.interfaces.WorldEditSelection;
+import me.devaustin.deephomes.managers.FileManager;
+import me.devaustin.deephomes.regions.BuyRegion;
+import me.devaustin.deephomes.regions.GeneralRegion;
+import me.devaustin.deephomes.regions.RentRegion;
+import me.devaustin.deephomes.tools.Utils;
+import me.devaustin.bukkitdo.Do;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
@@ -121,7 +121,7 @@ public class AddCommand extends CommandDeepHomes {
 		}
 		final boolean isRent = "rent".equalsIgnoreCase(args[1]);
 		final Player finalPlayer = player;
-		AreaShop.debug("Starting add task with " + regions.size() + " regions");
+		DeepHomes.debug("Starting add task with " + regions.size() + " regions");
 
 		TreeSet<GeneralRegion> regionsSuccess = new TreeSet<>();
 		TreeSet<GeneralRegion> regionsAlready = new TreeSet<>();
@@ -164,7 +164,7 @@ public class AddCommand extends CommandDeepHomes {
 					existing.addAll(plugin.getWorldGuardHandler().getOwners(region).asUniqueIdList());
 					existing.addAll(plugin.getWorldGuardHandler().getMembers(region).asUniqueIdList());
 
-					AreaShop.debug("regionAddLandlordStatus:", regionName,
+					DeepHomes.debug("regionAddLandlordStatus:", regionName,
 							"landlord:", landlord,
 							"existing:", existing,
 							"isMember:", isMember,
