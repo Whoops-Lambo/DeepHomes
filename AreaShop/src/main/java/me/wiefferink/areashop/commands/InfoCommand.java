@@ -1,11 +1,11 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.regions.BuyRegion;
-import me.wiefferink.areashop.regions.GeneralRegion;
-import me.wiefferink.areashop.regions.RegionGroup;
-import me.wiefferink.areashop.regions.RentRegion;
-import me.wiefferink.areashop.tools.Utils;
-import me.wiefferink.interactivemessenger.processing.Message;
+import me.devaustin.deephomes.regions.BuyRegion;
+import me.devaustin.deephomes.regions.GeneralRegion;
+import me.devaustin.deephomes.regions.RegionGroup;
+import me.devaustin.deephomes.regions.RentRegion;
+import me.devaustin.deephomes.tools.Utils;
+import me.devaustin.interactivemessenger.processing.Message;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -18,16 +18,16 @@ import java.util.Set;
 
 // TODO fix '/as info' help message hitting replacement limit (improve depth tracking?)
 // TODO add info about autoExtend
-public class InfoCommand extends CommandAreaShop {
+public class InfoCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop info";
+		return "deephomes info";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.info")) {
+		if(target.hasPermission("deephomes.info")) {
 			return "help-info";
 		}
 		return null;
@@ -157,7 +157,7 @@ public class InfoCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.info")) {
+		if(!sender.hasPermission("deephomes.info")) {
 			plugin.message(sender, "info-noPermission");
 			return;
 		}
