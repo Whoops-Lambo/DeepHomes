@@ -1,9 +1,9 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.regions.BuyRegion;
-import me.wiefferink.areashop.regions.GeneralRegion;
-import me.wiefferink.areashop.regions.RentRegion;
-import me.wiefferink.areashop.tools.Utils;
+import me.devaustin.deephomes.regions.BuyRegion;
+import me.devaustin.deephomes.regions.GeneralRegion;
+import me.devaustin.deephomes.regions.RentRegion;
+import me.devaustin.deephomes.tools.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
@@ -14,16 +14,16 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class MeCommand extends CommandAreaShop {
+public class MeCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop me";
+		return "deephomes me";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.me")) {
+		if(target.hasPermission("deephomes.me")) {
 			return "help-me";
 		}
 		return null;
@@ -31,7 +31,7 @@ public class MeCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.me")) {
+		if(!sender.hasPermission("deephomes.me")) {
 			plugin.message(sender, "me-noPermission");
 			return;
 		}
