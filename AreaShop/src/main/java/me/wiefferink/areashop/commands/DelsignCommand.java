@@ -1,8 +1,8 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.features.signs.RegionSign;
-import me.wiefferink.areashop.features.signs.SignsFeature;
-import me.wiefferink.areashop.tools.Materials;
+import me.devaustin.deephomes.features.signs.RegionSign;
+import me.devaustin.deephomes.features.signs.SignsFeature;
+import me.devaustin.deephomes.tools.Materials;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.command.CommandSender;
@@ -12,16 +12,16 @@ import org.bukkit.util.BlockIterator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DelsignCommand extends CommandAreaShop {
+public class DelsignCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop delsign";
+		return "deephomes delsign";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.delsign")) {
+		if(target.hasPermission("deephomes.delsign")) {
 			return "help-delsign";
 		}
 		return null;
@@ -29,7 +29,7 @@ public class DelsignCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.delsign")) {
+		if(!sender.hasPermission("deephomes.delsign")) {
 			plugin.message(sender, "delsign-noPermission");
 			return;
 		}
