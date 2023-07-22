@@ -57,8 +57,8 @@ public class AddCommand extends CommandDeepHomes {
 				&& !sender.hasPermission("deephomes.createrent.owner")
 
 				&& !sender.hasPermission("deephomes.createbuy")
-				&& !sender.hasPermission("areashop.createbuy.member")
-				&& !sender.hasPermission("areashop.createbuy.owner")) {
+				&& !sender.hasPermission("deephomes.createbuy.member")
+				&& !sender.hasPermission("deephomes.createbuy.owner")) {
 			plugin.message(sender, "add-noPermission");
 			return;
 		}
