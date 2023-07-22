@@ -1,9 +1,9 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.regions.BuyRegion;
-import me.wiefferink.areashop.regions.GeneralRegion;
-import me.wiefferink.areashop.regions.RentRegion;
-import me.wiefferink.areashop.tools.Utils;
+import me.devaustin.deephomes.regions.BuyRegion;
+import me.devaustin.deephomes.regions.GeneralRegion;
+import me.devaustin.deephomes.regions.RentRegion;
+import me.devaustin.deephomes.tools.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
@@ -12,16 +12,16 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddfriendCommand extends CommandAreaShop {
+public class AddfriendCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop addfriend";
+		return "deephomes addfriend";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.addfriendall") || target.hasPermission("areashop.addfriend")) {
+		if(target.hasPermission("deephomes.addfriendall") || target.hasPermission("deephomes.addfriend")) {
 			return "help-addFriend";
 		}
 		return null;
@@ -30,7 +30,7 @@ public class AddfriendCommand extends CommandAreaShop {
 	@SuppressWarnings("deprecation")
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.addfriend") && !sender.hasPermission("areashop.addfriendall")) {
+		if(!sender.hasPermission("deephomes.addfriend") && !sender.hasPermission("deephomes.addfriendall")) {
 			plugin.message(sender, "addfriend-noPermission");
 			return;
 		}
@@ -65,7 +65,7 @@ public class AddfriendCommand extends CommandAreaShop {
 				return;
 			}
 		}
-		if(sender.hasPermission("areashop.addfriendall")) {
+		if(sender.hasPermission("deephomes.addfriendall")) {
 			if((region instanceof RentRegion && !((RentRegion)region).isRented())
 					|| (region instanceof BuyRegion && !((BuyRegion)region).isSold())) {
 				plugin.message(sender, "addfriend-noOwner", region);
@@ -89,7 +89,7 @@ public class AddfriendCommand extends CommandAreaShop {
 				plugin.message(sender, "addfriend-successOther", friend.getName(), region);
 			}
 		} else {
-			if(sender.hasPermission("areashop.addfriend") && sender instanceof Player) {
+			if(sender.hasPermission("deephomes.addfriend") && sender instanceof Player) {
 				if(region.isOwner((Player)sender)) {
 					OfflinePlayer friend = Bukkit.getOfflinePlayer(args[1]);
 					if(friend.getLastPlayed() == 0 && !friend.isOnline() && !plugin.getConfig().getBoolean("addFriendNotExistingPlayers")) {
