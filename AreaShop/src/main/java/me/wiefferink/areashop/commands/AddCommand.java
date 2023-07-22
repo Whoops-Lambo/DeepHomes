@@ -29,22 +29,22 @@ import java.util.TreeSet;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-public class AddCommand extends CommandAreaShop {
+public class AddCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop add";
+		return "deephomes add";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.createrent")
-				|| target.hasPermission("areashop.createrent.member")
-				|| target.hasPermission("areashop.createrent.owner")
+		if(target.hasPermission("deephomes.createrent")
+				|| target.hasPermission("deephomes.createrent.member")
+				|| target.hasPermission("deephomes.createrent.owner")
 
-				|| target.hasPermission("areashop.createbuy")
-				|| target.hasPermission("areashop.createbuy.member")
-				|| target.hasPermission("areashop.createbuy.owner")) {
+				|| target.hasPermission("deephomes.createbuy")
+				|| target.hasPermission("deephomes.createbuy.member")
+				|| target.hasPermission("deephomes.createbuy.owner")) {
 			return "help-add";
 		}
 		return null;
@@ -52,11 +52,11 @@ public class AddCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(final CommandSender sender, final String[] args) {
-		if(!sender.hasPermission("areashop.createrent")
-				&& !sender.hasPermission("areashop.createrent.member")
-				&& !sender.hasPermission("areashop.createrent.owner")
+		if(!sender.hasPermission("deephomes.createrent")
+				&& !sender.hasPermission("deephomes.createrent.member")
+				&& !sender.hasPermission("deephomes.createrent.owner")
 
-				&& !sender.hasPermission("areashop.createbuy")
+				&& !sender.hasPermission("deephomes.createbuy")
 				&& !sender.hasPermission("areashop.createbuy.member")
 				&& !sender.hasPermission("areashop.createbuy.owner")) {
 			plugin.message(sender, "add-noPermission");
