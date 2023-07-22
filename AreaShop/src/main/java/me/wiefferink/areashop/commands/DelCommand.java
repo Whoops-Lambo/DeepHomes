@@ -67,7 +67,7 @@ public class DelCommand extends CommandDeepHomes {
 						continue;
 					}
 				} else if(region instanceof BuyRegion) {
-					if(!sender.hasPermission("areashop.destroybuy") && !(isLandlord && sender.hasPermission("areashop.destroybuy.landlord"))) {
+					if(!sender.hasPermission("deephomes.destroybuy") && !(isLandlord && sender.hasPermission("deephomes.destroybuy.landlord"))) {
 						regionsFailed.add(region);
 						continue;
 					}
@@ -100,7 +100,7 @@ public class DelCommand extends CommandDeepHomes {
 			boolean isLandlord = sender instanceof Player && region.isLandlord(((Player)sender).getUniqueId());
 			if(region instanceof RentRegion) {
 				// Remove the rent if the player has permission
-				if(sender.hasPermission("areashop.destroyrent") || (isLandlord && sender.hasPermission("areashop.destroyrent.landlord"))) {
+				if(sender.hasPermission("deephomes.destroyrent") || (isLandlord && sender.hasPermission("deephomes.destroyrent.landlord"))) {
 					DeletingRegionEvent event = plugin.getFileManager().deleteRegion(region, true);
 					if (event.isCancelled()) {
 						plugin.message(sender, "general-cancelled", event.getReason());
@@ -112,7 +112,7 @@ public class DelCommand extends CommandDeepHomes {
 				}
 			} else if(region instanceof BuyRegion) {
 				// Remove the buy if the player has permission
-				if(sender.hasPermission("areashop.destroybuy") || (isLandlord && sender.hasPermission("areashop.destroybuy.landlord"))) {
+				if(sender.hasPermission("deephomes.destroybuy") || (isLandlord && sender.hasPermission("areashop.destroybuy.landlord"))) {
 					DeletingRegionEvent event = plugin.getFileManager().deleteRegion(region, true);
 					if (event.isCancelled()) {
 						plugin.message(sender, "general-cancelled", event.getReason());
