@@ -29,11 +29,11 @@ assignees: ''
 <!--- Use '/version' for the Platform version and '/version <plugin>' for plugin versions -->
 * Server platform (Bukkit, Spigot, etc.): 
 * Server version: 
-* AreaShop version: 
+* DeepHomes version: 
 * WorldEdit version: 
 * WorldGuard version: 
 * Vault version: 
 
 
 **Your config files**
-<!--- Attach a '.zip' file of the '/plugins/AreaShop' and '/plugins/WorldGuard' directories to show your configuration setup -->
+<!--- Attach a '.zip' file of the '/plugins/DeepHomes' and '/plugins/WorldGuard' directories to show your configuration setup -->
