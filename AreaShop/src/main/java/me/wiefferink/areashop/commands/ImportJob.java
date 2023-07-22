@@ -1,16 +1,16 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
 import com.google.common.base.Charsets;
 import com.sk89q.worldguard.protection.managers.RegionManager;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
-import me.wiefferink.areashop.AreaShop;
-import me.wiefferink.areashop.events.ask.AddingRegionEvent;
-import me.wiefferink.areashop.features.signs.RegionSign;
-import me.wiefferink.areashop.features.signs.SignsFeature;
-import me.wiefferink.areashop.regions.BuyRegion;
-import me.wiefferink.areashop.regions.GeneralRegion;
-import me.wiefferink.areashop.regions.RegionGroup;
-import me.wiefferink.areashop.regions.RentRegion;
+import me.devaustin.deephomes.DeepHomes;
+import me.devaustin.deephomes.events.ask.AddingRegionEvent;
+import me.devaustin.deephomes.features.signs.RegionSign;
+import me.devaustin.deephomes.features.signs.SignsFeature;
+import me.devaustin.deephomes.regions.BuyRegion;
+import me.devaustin.deephomes.regions.GeneralRegion;
+import me.devaustin.deephomes.regions.RegionGroup;
+import me.devaustin.deephomes.regions.RentRegion;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;
@@ -30,7 +30,7 @@ import java.util.UUID;
 
 public class ImportJob {
 
-	private final AreaShop plugin;
+	private final DeepHomes plugin;
 	private final CommandSender sender;
 
 	/**
@@ -39,7 +39,7 @@ public class ImportJob {
 	 */
 	public ImportJob(CommandSender sender) {
 		this.sender = sender;
-		this.plugin = AreaShop.getInstance();
+		this.plugin = DeepHomes.getInstance();
 		execute();
 	}
 
@@ -97,7 +97,7 @@ public class ImportJob {
 			}
 			regionForSaleGroup.setSetting("rent.duration", duration);
 
-			// Global economy account has an effect close to landlord in AreaShop
+			// Global economy account has an effect close to landlord in DeepHomes
 			if(regionForSaleGeneral.isString("global_econ_account")) {
 				regionForSaleGroup.setSetting("general.landlordName", regionForSaleGeneral.getString("global_econ_account"));
 			}
