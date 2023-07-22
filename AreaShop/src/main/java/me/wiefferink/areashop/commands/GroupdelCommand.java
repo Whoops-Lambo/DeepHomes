@@ -1,9 +1,9 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.interfaces.WorldEditSelection;
-import me.wiefferink.areashop.regions.GeneralRegion;
-import me.wiefferink.areashop.regions.RegionGroup;
-import me.wiefferink.areashop.tools.Utils;
+import me.devaustin.deephomes.interfaces.WorldEditSelection;
+import me.devaustin.deephomes.regions.GeneralRegion;
+import me.devaustin.deephomes.regions.RegionGroup;
+import me.devaustin.deephomes.tools.Utils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -11,16 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
-public class GroupdelCommand extends CommandAreaShop {
+public class GroupdelCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop groupdel";
+		return "deephomes groupdel";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.groupdel")) {
+		if(target.hasPermission("deephomes.groupdel")) {
 			return "help-groupdel";
 		}
 		return null;
@@ -28,7 +28,7 @@ public class GroupdelCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.groupdel")) {
+		if(!sender.hasPermission("deephomes.groupdel")) {
 			plugin.message(sender, "groupdel-noPermission");
 			return;
 		}
