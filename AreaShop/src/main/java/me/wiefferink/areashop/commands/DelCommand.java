@@ -1,11 +1,11 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.events.ask.DeletingRegionEvent;
-import me.wiefferink.areashop.interfaces.WorldEditSelection;
-import me.wiefferink.areashop.regions.BuyRegion;
-import me.wiefferink.areashop.regions.GeneralRegion;
-import me.wiefferink.areashop.regions.RentRegion;
-import me.wiefferink.areashop.tools.Utils;
+import me.devaustin.deephomes.events.ask.DeletingRegionEvent;
+import me.devaustin.deephomes.interfaces.WorldEditSelection;
+import me.devaustin.deephomes.regions.BuyRegion;
+import me.devaustin.deephomes.regions.GeneralRegion;
+import me.devaustin.deephomes.regions.RentRegion;
+import me.devaustin.deephomes.tools.Utils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -13,16 +13,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
-public class DelCommand extends CommandAreaShop {
+public class DelCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop del";
+		return "deephomed del";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.destroyrent") || target.hasPermission("areashop.destroybuy") || target.hasPermission("areashop.destroyrent.landlord") || target.hasPermission("areashop.destroybuy.landlord")) {
+		if(target.hasPermission("deephomes.destroyrent") || target.hasPermission("deephomes.destroybuy") || target.hasPermission("deephomes.destroyrent.landlord") || target.hasPermission("deephomes.destroybuy.landlord")) {
 			return "help-del";
 		}
 		return null;
