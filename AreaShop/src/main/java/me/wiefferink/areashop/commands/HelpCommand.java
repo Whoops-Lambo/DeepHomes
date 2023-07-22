@@ -1,17 +1,17 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
 import org.bukkit.command.CommandSender;
 
-public class HelpCommand extends CommandAreaShop {
+public class HelpCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop help";
+		return "deephomes help";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.help")) {
+		if(target.hasPermission("deephomes.help")) {
 			return "help-help";
 		}
 		return null;
