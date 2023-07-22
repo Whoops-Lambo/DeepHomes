@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>areashop</artifactId>
     <packaging>jar</packaging>
-    <name>AreaShop</name>
-    <version>2.6.0</version> <!-- Main plugin version -->
+    <name>DeepHomes</name>
+    <version>1.0.0</version> <!-- Main plugin version -->
 
     <parent>
         <groupId>me.wiefferink</groupId>
@@ -268,7 +268,7 @@
 
     <build>
         <directory>target</directory>
-        <finalName>AreaShop</finalName>
+        <finalName>DeepHomes</finalName>
         <resources>
             <resource>
                 <targetPath>.</targetPath>
