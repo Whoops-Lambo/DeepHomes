@@ -1,7 +1,7 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.AreaShop;
-import me.wiefferink.interactivemessenger.processing.Message;
+import me.devaustin.deephomes.DeepHomes;
+import me.devaustin.interactivemessenger.processing.Message;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -14,13 +14,13 @@ import java.util.Map;
 /**
  * Abstract class for generalising command classes.
  */
-public abstract class CommandAreaShop {
+public abstract class CommandDeepHomes {
 
-	final AreaShop plugin = AreaShop.getInstance();
+	final DeepHomes plugin = DeepHomes.getInstance();
 
 	private final Map<String, CommandTime> lastUsed;
 
-	public CommandAreaShop() {
+	public CommandDeepHomes() {
 		lastUsed = new HashMap<>();
 	}
 
