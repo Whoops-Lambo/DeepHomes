@@ -1,21 +1,21 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.tools.Utils;
+import me.devaustin.deephomes.tools.Utils;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GrouplistCommand extends CommandAreaShop {
+public class GrouplistCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop grouplist";
+		return "deephomes grouplist";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.grouplist")) {
+		if(target.hasPermission("deephomes.grouplist")) {
 			return "help-grouplist";
 		}
 		return null;
@@ -23,7 +23,7 @@ public class GrouplistCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.grouplist")) {
+		if(!sender.hasPermission("deephomes.grouplist")) {
 			plugin.message(sender, "grouplist-noPermission");
 			return;
 		}
