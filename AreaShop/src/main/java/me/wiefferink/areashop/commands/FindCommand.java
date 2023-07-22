@@ -1,10 +1,10 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.regions.BuyRegion;
-import me.wiefferink.areashop.regions.RegionGroup;
-import me.wiefferink.areashop.regions.RentRegion;
-import me.wiefferink.areashop.tools.Utils;
-import me.wiefferink.interactivemessenger.processing.Message;
+import me.devaustin.deephomes.regions.BuyRegion;
+import me.devaustin.deephomes.regions.RegionGroup;
+import me.devaustin.deephomes.regions.RentRegion;
+import me.devaustin.deephomes.tools.Utils;
+import me.devaustin.interactivemessenger.processing.Message;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -12,16 +12,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class FindCommand extends CommandAreaShop {
+public class FindCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop find";
+		return "deephomes find";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.find")) {
+		if(target.hasPermission("deephomes.find")) {
 			return "help-find";
 		}
 		return null;
@@ -29,7 +29,7 @@ public class FindCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.find")) {
+		if(!sender.hasPermission("deephomes.find")) {
 			plugin.message(sender, "find-noPermission");
 			return;
 		}
