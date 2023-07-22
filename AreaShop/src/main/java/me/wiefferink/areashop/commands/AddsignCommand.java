@@ -1,10 +1,10 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.areashop.features.signs.RegionSign;
-import me.wiefferink.areashop.features.signs.SignsFeature;
-import me.wiefferink.areashop.regions.GeneralRegion;
-import me.wiefferink.areashop.tools.Materials;
-import me.wiefferink.areashop.tools.Utils;
+import me.devaustin.deephomes.features.signs.RegionSign;
+import me.devaustin.deephomes.features.signs.SignsFeature;
+import me.devaustin.deephomes.regions.GeneralRegion;
+import me.devaustin.deephomes.tools.Materials;
+import me.devaustin.deephomes.tools.Utils;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.command.CommandSender;
@@ -15,16 +15,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class AddsignCommand extends CommandAreaShop {
+public class AddsignCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop addsign";
+		return "deephomes addsign";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.addsign")) {
+		if(target.hasPermission("deephomes.addsign")) {
 			return "help-addsign";
 		}
 		return null;
@@ -32,7 +32,7 @@ public class AddsignCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.addsign")) {
+		if(!sender.hasPermission("deephomes.addsign")) {
 			plugin.message(sender, "addsign-noPermission");
 			return;
 		}
