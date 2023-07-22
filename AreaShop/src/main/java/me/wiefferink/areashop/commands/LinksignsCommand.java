@@ -1,6 +1,6 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.interactivemessenger.processing.Message;
+import me.devaustin.interactivemessenger.processing.Message;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
@@ -9,16 +9,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class LinksignsCommand extends CommandAreaShop {
+public class LinksignsCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop linksigns";
+		return "deephomes linksigns";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.linksigns")) {
+		if(target.hasPermission("deephomes.linksigns")) {
 			return "help-linksigns";
 		}
 		return null;
@@ -26,7 +26,7 @@ public class LinksignsCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.linksigns")) {
+		if(!sender.hasPermission("deephomes.linksigns")) {
 			plugin.message(sender, "linksigns-noPermission");
 			return;
 		}
