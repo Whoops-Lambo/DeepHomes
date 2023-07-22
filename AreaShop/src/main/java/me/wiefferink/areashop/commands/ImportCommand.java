@@ -1,12 +1,12 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
-import me.wiefferink.interactivemessenger.processing.Message;
+import me.devaustin.interactivemessenger.processing.Message;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImportCommand extends CommandAreaShop {
+public class ImportCommand extends CommandDeepHomes {
 
 	/* RegionGroup priority usage:
 	   0: Settings from /config.yml
@@ -16,12 +16,12 @@ public class ImportCommand extends CommandAreaShop {
 
 	@Override
 	public String getCommandStart() {
-		return "areashop import";
+		return "deephomes import";
 	}
 
 	@Override
 	public String getHelp(CommandSender target) {
-		if(target.hasPermission("areashop.import")) {
+		if(target.hasPermission("deephomes.import")) {
 			return "help-import";
 		}
 		return null;
@@ -35,7 +35,7 @@ public class ImportCommand extends CommandAreaShop {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.import")) {
+		if(!sender.hasPermission("deephomes.import")) {
 			plugin.message(sender, "import-noPermission");
 			return;
 		}
