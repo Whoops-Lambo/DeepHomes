@@ -112,7 +112,7 @@ public class DelCommand extends CommandDeepHomes {
 				}
 			} else if(region instanceof BuyRegion) {
 				// Remove the buy if the player has permission
-				if(sender.hasPermission("deephomes.destroybuy") || (isLandlord && sender.hasPermission("areashop.destroybuy.landlord"))) {
+				if(sender.hasPermission("deephomes.destroybuy") || (isLandlord && sender.hasPermission("deephomes.destroybuy.landlord"))) {
 					DeletingRegionEvent event = plugin.getFileManager().deleteRegion(region, true);
 					if (event.isCancelled()) {
 						plugin.message(sender, "general-cancelled", event.getReason());
