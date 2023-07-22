@@ -17,7 +17,7 @@ public class DelCommand extends CommandDeepHomes {
 
 	@Override
 	public String getCommandStart() {
-		return "deephomed del";
+		return "deephomes del";
 	}
 
 	@Override
@@ -30,11 +30,11 @@ public class DelCommand extends CommandDeepHomes {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		if(!sender.hasPermission("areashop.destroybuy")
-				&& !sender.hasPermission("areashop.destroybuy.landlord")
+		if(!sender.hasPermission("deephomes.destroybuy")
+				&& !sender.hasPermission("deephomes.destroybuy.landlord")
 
-				&& !sender.hasPermission("areashop.destroyrent")
-				&& !sender.hasPermission("areashop.destroyrent.landlord")) {
+				&& !sender.hasPermission("deephomes.destroyrent")
+				&& !sender.hasPermission("deephomes.destroyrent.landlord")) {
 			plugin.message(sender, "del-noPermission");
 			return;
 		}
@@ -62,7 +62,7 @@ public class DelCommand extends CommandDeepHomes {
 			for(GeneralRegion region : regions) {
 				boolean isLandlord = region.isLandlord(((Player)sender).getUniqueId());
 				if(region instanceof RentRegion) {
-					if(!sender.hasPermission("areashop.destroyrent") && !(isLandlord && sender.hasPermission("areashop.destroyrent.landlord"))) {
+					if(!sender.hasPermission("deephomes.destroyrent") && !(isLandlord && sender.hasPermission("deephomes.destroyrent.landlord"))) {
 						regionsFailed.add(region);
 						continue;
 					}
