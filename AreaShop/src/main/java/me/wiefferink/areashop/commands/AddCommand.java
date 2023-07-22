@@ -1,8 +1,8 @@
-package me.wiefferink.areashop.commands;
+package me.devaustin.deephomes.commands;
 
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
-import me.wiefferink.areashop.AreaShop;
-import me.wiefferink.areashop.events.ask.AddingRegionEvent;
+import me.devaustin.deephomss.DeepHomss;
+import me.devaustin.deephomes.events.ask.AddingRegionEvent;
 import me.wiefferink.areashop.events.ask.BuyingRegionEvent;
 import me.wiefferink.areashop.events.ask.RentingRegionEvent;
 import me.wiefferink.areashop.events.notify.BoughtRegionEvent;
